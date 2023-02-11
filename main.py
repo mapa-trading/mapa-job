@@ -1,19 +1,25 @@
 from flask import Flask
-import os
-from atualiza_banco_dados import buscar_e_inserir_dados_iniciais, buscar_e_inserir_cotacoes
 
-INSERIR_DADOS_INICIAIS = os.environ.get("INSERIR_DADOS_INICIAIS", "true")
+from atualiza_banco_dados import buscar_e_inserir_dados_iniciais, buscar_e_inserir_cotacoes
 
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/atualizar-cotacoes", methods=['POST'])
 def update():
-    if INSERIR_DADOS_INICIAIS == "true":
-        buscar_e_inserir_dados_iniciais()
-
     buscar_e_inserir_cotacoes()
     return "Cotacoes atualizadas"
+
+
+@app.route("/", methods=['GET'])
+def hello():
+    return "Tudo certo por aqui"
+
+
+@app.route('/dados-iniciais', methods=['POST'])
+def init_dados():
+    buscar_e_inserir_dados_iniciais()
+    return "Beleza adicionou os dados"
 
 
 if __name__ == '__main__':
