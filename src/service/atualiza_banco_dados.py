@@ -1,5 +1,5 @@
-from src.busca_dados_brapi import get_crypto_by_sigla, get_acao_by_sigla, get_moeda_by_sigla
-from src.inseri_dados_mapa_cotacoes import inseri_dados_crypto, inseri_dados_moeda, inseri_dados_acoes
+from src.apis.busca_dados_brapi import get_crypto_by_sigla, get_acao_by_sigla, get_moeda_by_sigla
+from src.apis.inseri_dados_mapa_cotacoes import inseri_dados_crypto, inseri_dados_moeda, inseri_dados_acoes
 
 
 CRYPTOS = ["BTC", "ETH", "LTC", "BNB", "DOGE", "AVAX", "BCH", "USDC", "BUSD"]

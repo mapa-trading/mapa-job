@@ -1,6 +1,6 @@
 from flask import Flask
 
-from atualiza_banco_dados import buscar_e_inserir_dados_iniciais, buscar_e_inserir_cotacoes
+from src.service.atualiza_banco_dados import buscar_e_inserir_dados_iniciais, buscar_e_inserir_cotacoes
 
 app = Flask(__name__)
 

@@ -2,7 +2,6 @@ import json
 
 import requests
 
-from src.inseri_dados_mapa_cotacoes import inseri_dados_crypto
 from src.model.acao import Acao
 from src.model.crypto import Crypto
 from src.model.moeda import Moeda
