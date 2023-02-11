@@ -24,6 +24,7 @@ def buscar_e_inserir_dados_iniciais():
 
 
 def buscar_e_inserir_cotacoes():
+    print("Buscando e armazenando as cotações")
     for crypto in CRYPTOS:
         # TODO()
         pass
