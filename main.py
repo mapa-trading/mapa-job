@@ -1,4 +1,5 @@
 from flask import Flask
+from waitress import serve
 
 from src.service.atualiza_banco_dados import buscar_e_inserir_dados_iniciais, buscar_e_inserir_cotacoes
 
@@ -23,4 +24,6 @@ def init_dados():
 
 
 if __name__ == '__main__':
-    app.run()
+    print("Run in http://localhost:8081 🚀")
+    serve(app, host="0.0.0.0", port=8081)
+
