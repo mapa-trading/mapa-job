@@ -17,3 +17,10 @@ def inseri_dados_crypto(json):
 def inseri_dados_moeda(json):
     request = requests.post('http://localhost:8080/moedas', json=json)
     print(request.url, request.status_code)
+
+
+def inseri_dados_cotacoes(json):
+    request = requests.post('http://localhost:8080/cotacoes', json=json)
+    print(request.url, request.status_code)
+
+
