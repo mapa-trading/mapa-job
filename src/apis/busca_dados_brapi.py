@@ -1,8 +1,9 @@
 import json
+from datetime import datetime
 
 import requests
 
-from src.model.acao import Acao
+from src.model.Cotacao import Cotacao
 from src.model.crypto import Crypto
 from src.model.moeda import Moeda
 
@@ -24,3 +25,16 @@ def get_moeda_by_sigla(sigla):
     result = json.loads(request.content)["currency"][0]
 
     return Moeda(result["name"], result["fromCurrency"], result["toCurrency"], result["fromCurrency"])
+
+
+def get_cotacao_acao_by_sigla(sigla):
+    request = requests.get(f"{BASE_API}/quote/{sigla}")
+    print(request.url)
+    result = json.loads(request.content)["results"][0]
+
+    dataHora = result["regularMarketTime"][0:16]
+
+    print(dataHora)
+
+    return Cotacao(sigla, dataHora, result["regularMarketPrice"])
+
