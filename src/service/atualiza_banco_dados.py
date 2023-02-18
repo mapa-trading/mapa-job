@@ -5,7 +5,7 @@ from src.apis.inseri_dados_mapa_cotacoes import inseri_dados_crypto, inseri_dado
     inseri_dados_cotacoes
 
 CRYPTOS = ["BTC", "ETH", "LTC", "DOGE"]
-ACOES = ["EMBR3", "PETR4", "MGLU3", "VALE3", "ITUB3", "ABEV3", "WEGE3", "BBDC3", "B3SA3"]
+ACOES = []#["EMBR3", "PETR4", "MGLU3", "VALE3", "ITUB3", "ABEV3", "WEGE3", "BBDC3", "B3SA3"]
 MOEDAS = ["USD", "EUR", "ARS", "BOB", "CNY", "PYG", "VEF"]
 
 
